@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, send_file
 from scrapper import get_jobs
-# from scrapper2 import get_jobs2
+from scrapper2 import get_jobs2
 from exporter import save_to_file
 
 app = Flask("JobScrapper")
@@ -21,8 +21,8 @@ def report():
       jobs = existingJobs
     else:
       jobs = get_jobs(word)
-      # jobs2 = get_jobs2(word)
-      # jobs = jobs + jobs2
+      jobs2 = get_jobs2(word)
+      jobs = jobs + jobs2
       db[word] = jobs
   else:
     return redirect("/")
