@@ -34,7 +34,6 @@
                 } 
         </style>
 
-출처: https://bokartstudio.tistory.com/36 [우아한 열정]
     </head>
     <body> 
         <div class="wrap"> 
